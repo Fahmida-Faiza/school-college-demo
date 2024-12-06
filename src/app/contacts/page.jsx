@@ -4,15 +4,8 @@ export default function ContactPage() {
   return (
     <div>
 
-<div
-  className="hero min-h-screen"
-  style={{
-    backgroundImage: "url(/slide-03.jpg)",
-  }}>
-  
- 
-</div>
-      <div className="hero  min-h-screen">
+
+      <div className="hero  min-h-screen ">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left text-black">
             <h1 className="text-5xl font-bold ">Contact now!</h1>

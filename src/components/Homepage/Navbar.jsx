@@ -82,10 +82,10 @@ const navItems = [
     //     title: "MyBookings",
     //     path: "/my-bookings"
     // },
-    {
-        title: "Blog",
-        path: "/blogs"
-    },
+    // {
+    //     title: "Blog",
+    //     path: "/blogs"
+    // },
     {
         title: "Contacts",
         path: "/contacts"

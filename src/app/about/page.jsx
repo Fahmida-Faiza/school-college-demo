@@ -92,26 +92,7 @@ function About() {
 
 
 
-            {/* 2nd card */}
-
-
-            <div className="hero bg-slate-100  text-black my-10">
-                <div className="hero-content flex-col lg:flex-row">
-                    <Image
-                        src="/9187604.png" width="1200" height="1200"
-
-                        className="max-w-sm rounded-lg shadow-2xl" />
-                    <div className='lg:pl-40'>
-                        <h1 className="text-5xl font-bold">Your Business Potential with Our Proven Strategies</h1>
-                        <p className="py-6">
-                            First your free consultant for 1 hour. We are waiting for your invitation. Give us an opportunity to work with you and give a boost to your business.
-
-
-                        </p>
-                        <button className="btn btn-error">Join With Us</button>
-                    </div>
-                </div>
-            </div>
+          
         </div>
 
 
