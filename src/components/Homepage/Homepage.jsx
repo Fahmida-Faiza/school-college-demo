@@ -13,27 +13,21 @@ import Image from 'next/image';
 const Homepage = () => {
     return (
         <>
-            <Swiper
-                spaceBetween={30}
-                centeredSlides={true}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                }}
-                pagination={{
-                    clickable: true,
-                }}
-                navigation={true}
-                modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper"
-            >
-                <SwiperSlide><Image src="/slide-04.jpg" height="1000" width="4000" alt="" /></SwiperSlide>
-                <SwiperSlide><Image src="/slide-03.jpg" height="1000" width="4000" alt="" /></SwiperSlide>
-                <SwiperSlide><Image src="/slide-04.jpg" height="1000" width="4000" alt="" /></SwiperSlide>
-                <SwiperSlide><Image src="/slide-03.jpg" height="1000" width="4000" alt="" /></SwiperSlide>
+     <div className='grid grid-cols-2 w-[90%] mx-auto'>
+    <div className='menu text-black bg-blue-50 rounded-box w-56'>
+        <ul class="">
+       <li> <a className="link link-hover">Student</a></li>
+      <li>  <a className="link link-hover">Teacher</a></li>
+       <li> <a className="link link-hover">Routine</a></li>
+       <li> <a className="link link-hover">Payment</a></li>
+        </ul>
+    </div>
 
+    <div className='bg-blue-100'>
+   
+    </div>
+</div>
 
-            </Swiper>
 
 
 
@@ -43,22 +37,7 @@ const Homepage = () => {
 
             {/* 2nd */}
 
-            <div className="hero text-black border  my-14">
-                <div className="hero-content flex-col lg:flex-row">
-                    <Image
-                        src="/9187604.png"
-                        className="rounded-lg shadow-2xl w-[30%]" alt="" height="1000" width="4000" />
-                    <div>
-                        <h1 className="text-5xl font-bold">Message Of Principal</h1>
-                        <p className="py-6">
-
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis in expedita, vel dolore vitae illo libero cum voluptate necessitatibus id assumenda deleniti quae nulla nihil!
-
-                        </p>
-
-                    </div>
-                </div>
-            </div>
+           
 
 
             {/* 3rd */}
