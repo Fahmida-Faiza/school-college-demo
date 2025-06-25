@@ -20,14 +20,14 @@ function About() {
                         In Bangladesh, Bata started its operation in 1962. Currently Bata Shoe Company (Bangladesh) Limited operates two manufacturing facilities – one in Tongi and the other in Dhamrai. With a production capacity of 160,000 pairs of shoes daily. Annual shoe sales currently stands about 30 million pairs.</p>
                 </div>
 
-                <div class="      grid  grid-cols-1 lg:grid-cols-3  my-20  gap-2" data-aos="fade-up"
+                <div className="      grid  grid-cols-1 lg:grid-cols-3  my-20  gap-2" data-aos="fade-up"
                     data-aos-duration="3000">
                     <div>
                         <div className="card card-compact text-black w-80 lg:w-96 md:w-80  shadow-xl border-x-8 bg-white">
                             <figure>
                                 <Image
                                     src="/9187604.png" width="700" height="1200"
-                                    className="" />
+                                    className="" alt=""/>
                             </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title">Aubrey Bravo</h2>
@@ -44,7 +44,7 @@ function About() {
                             <figure>
                                 <Image
                                     src="/9187604.png" width="700" height="1200"
-                                    className="" />
+                                    className="" alt=""/>
                             </figure>
                             <div className="card-body items-center text-center bg-red-500">
                                 <h2 className="card-title">Bryony Storey</h2>

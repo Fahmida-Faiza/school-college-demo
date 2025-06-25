@@ -15,8 +15,37 @@ const Navbar = () => {
 // /////////////////////////
 
     return (
-        <div>
-            <div  className="navbar bg-white text-black">
+        <div >
+
+
+ <div className='lg:flex  flex-row-reverse text-white bg-blue-800  gap-x-3 p-2' >
+                   
+                     
+                         <div>
+                             <Link href="/student" className="">Student</Link>
+                         </div>
+                       <div>
+                         <Link href="" className="">Teacher</Link>
+                       </div>
+                       <div>
+                         <Link href="" className="">Routine</Link>
+                       </div>
+                        <div>
+                            <Link href="" className="">Payment</Link>
+                        </div>
+                    
+                 
+               
+
+              
+            </div>
+
+
+
+
+
+
+            <div  className="navbar bg-white text-black ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -57,7 +86,10 @@ const Navbar = () => {
                         {/* ............................................... */}
                     </ul>
                 </div>
-                <div className="navbar-end"></div>
+                {/* <div className="navbar-end">
+
+
+                </div> */}
             </div>
         </div>
     );

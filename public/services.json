@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "class": "10A",
+      "address": "123 Maple Street, Springfield",
+      "phone": "555-1234",
+      "image": "https://randomuser.me/api/portraits/women/1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Brian Smith",
+      "class": "10B",
+      "address": "456 Oak Avenue, Greenville",
+      "phone": "555-5678",
+      "image": "https://randomuser.me/api/portraits/men/2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Clara Williams",
+      "class": "11A",
+      "address": "789 Pine Road, Centerville",
+      "phone": "555-8765",
+      "image": "https://randomuser.me/api/portraits/women/3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "David Brown",
+      "class": "11B",
+      "address": "321 Elm Street, Fairview",
+      "phone": "555-4321",
+      "image": "https://randomuser.me/api/portraits/men/4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Ella Davis",
+      "class": "12A",
+      "address": "654 Cedar Lane, Franklin",
+      "phone": "555-6789",
+      "image": "https://randomuser.me/api/portraits/women/5.jpg"
+    }
+  ]
+  

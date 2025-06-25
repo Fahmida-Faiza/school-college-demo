@@ -9,25 +9,13 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Homepage = () => {
     return (
         <>
-     <div className='grid grid-cols-2 w-[90%] mx-auto'>
-    <div className='menu text-black bg-blue-50 rounded-box w-56'>
-        <ul class="">
-       <li> <a className="link link-hover">Student</a></li>
-      <li>  <a className="link link-hover">Teacher</a></li>
-       <li> <a className="link link-hover">Routine</a></li>
-       <li> <a className="link link-hover">Payment</a></li>
-        </ul>
-    </div>
-
-    <div className='bg-blue-100'>
-   
-    </div>
-</div>
-
+           
+               
 
 
 
@@ -37,7 +25,7 @@ const Homepage = () => {
 
             {/* 2nd */}
 
-           
+
 
 
             {/* 3rd */}
@@ -114,7 +102,7 @@ const Homepage = () => {
                 <SwiperSlide>
                     <div className="card w-80 md:w-[22rem] text-black shadow-xl ">
                         <figure className="px-10 pt-10">
-                        <Image src="/9187604.png" height="1000" width="4000" alt="" />
+                            <Image src="/9187604.png" height="1000" width="4000" alt="" />
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">Shoes!</h2>
@@ -128,7 +116,7 @@ const Homepage = () => {
                 <SwiperSlide>
                     <div className="card w-80 md:w-[22rem] text-black shadow-xl">
                         <figure className="px-10 pt-10">
-                        <Image src="/9187604.png" height="1000" width="4000" alt="" />
+                            <Image src="/9187604.png" height="1000" width="4000" alt="" />
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">Shoes!</h2>
@@ -142,7 +130,7 @@ const Homepage = () => {
                 <SwiperSlide>
                     <div className="card w-80 md:w-[22rem] text-black shadow-xl">
                         <figure className="px-10 pt-10">
-                        <Image src="/9187604.png" height="1000" width="4000" alt="" />
+                            <Image src="/9187604.png" height="1000" width="4000" alt="" />
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">Shoes!</h2>
@@ -156,7 +144,7 @@ const Homepage = () => {
                 <SwiperSlide>
                     <div className="card w-80 md:w-[22rem] text-black shadow-xl">
                         <figure className="px-10 pt-10">
-                        <Image src="/9187604.png" height="1000" width="4000" alt="" />
+                            <Image src="/9187604.png" height="1000" width="4000" alt="" />
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">Shoes!</h2>
@@ -170,7 +158,7 @@ const Homepage = () => {
                 <SwiperSlide>
                     <div className="card w-80 md:w-[22rem] text-black shadow-xl">
                         <figure className="px-10 pt-10">
-                        <Image src="/9187604.png" height="1000" width="4000" alt="" />
+                            <Image src="/9187604.png" height="1000" width="4000" alt="" />
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">Shoes!</h2>
@@ -184,7 +172,7 @@ const Homepage = () => {
                 <SwiperSlide>
                     <div className="card w-80 md:w-[22rem] text-black shadow-xl">
                         <figure className="px-10 pt-10">
-                        <Image src="/9187604.png" height="1000" width="4000" alt="" />
+                            <Image src="/9187604.png" height="1000" width="4000" alt="" />
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">Shoes!</h2>
@@ -196,7 +184,7 @@ const Homepage = () => {
                     </div>
                 </SwiperSlide>
             </Swiper>
-          
+
 
 
 
