@@ -18,7 +18,7 @@ const Navbar = () => {
         <div >
 
 
- <div className='lg:flex  flex-row-reverse text-white bg-blue-800  gap-x-3 p-2' >
+ <div className='lg:flex   justify-end  text-white bg-blue-800  gap-x-3 p-2' >
                    
                      
                          <div>
