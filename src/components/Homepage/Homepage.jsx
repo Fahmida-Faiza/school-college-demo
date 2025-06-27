@@ -51,61 +51,62 @@ const Homepage = () => {
 
       {/* 2nd */}
 
-      <div className='text-black flex gap-10'>
+      <div className='text-black lg:flex gap-10 lg:p-10'>
 
         <div className='mt-10'>
-          <div className='text-xl font-bold'>
-            <h1>What We Offer</h1>
+          <div className='text-xl'>
+            <h1 className='text-3xl'>What We Offer</h1>
             <p>At Daffodil International University, students get the opportunity to think, learn and grow.</p>
           </div>
 
           {/* main image part */}
-          <div className='grid grid-cols-2 gap-2 mt-10'>
+          <div className='grid lg:grid-cols-2 gap-2 mt-10'>
             <div className='flex gap-5'>
-              <FcLibrary className='text-3xl' />
+              <FcLibrary className='text-3xl ' />
               <div>
-                <h2 className='text-xl font-bold'>This is title</h2>
-                <p className='text-lg'>Lorem ipsum dolor sit amet.</p>
+                <h2 className='text-xl font-bold'>Accommodation</h2>
+                <p className='text-lg'>We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home....</p>
               </div>
             </div>
 
             <div className='flex gap-5'>
               <FcLibrary className='text-3xl' />
               <div>
-                <h2 className='text-xl font-bold'>This is title</h2>
-                <p className='text-lg'>Lorem ipsum dolor sit amet.</p>
+                <h2 className='text-xl font-bold'>Library</h2>
+                <p className='text-lg'>We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home....</p>
               </div>
             </div>
 
             <div className='flex gap-5'>
               <FcLibrary className='text-3xl' />
               <div>
-                <h2 className='text-xl font-bold'>This is title</h2>
-                <p className='text-lg'>Lorem ipsum dolor sit amet.</p>
+                <h2 className='text-xl font-bold'>Blended Learning Platform</h2>
+                <p className='text-lg'>We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home....</p>
               </div>
             </div>
             
             <div className='flex gap-5'>
               <FcLibrary className='text-3xl' />
               <div>
-                <h2 className='text-xl font-bold'>This is title</h2>
-                <p className='text-lg'>Lorem ipsum dolor sit amet.</p>
+                <h2 className='text-xl font-bold'>Transportation</h2>
+                <p className='text-lg'>We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home.....</p>
               </div>
             </div>
             
             <div className='flex gap-5'>
               <FcLibrary className='text-3xl' />
               <div>
-                <h2 className='text-xl font-bold'>This is title</h2>
-                <p className='text-lg'>Lorem ipsum dolor sit amet.</p>
+                <h2 className='text-xl font-bold'>One student one laptop</h2>
+                <p className='text-lg'>We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home....</p>
               </div>
             </div>
             
             <div className='flex gap-5'>
               <FcLibrary className='text-3xl' />
               <div>
-                <h2 className='text-xl font-bold'>This is title</h2>
-                <p className='text-lg'>Lorem ipsum dolor sit amet.</p>
+                <h2 className='text-xl font-bold'>Sports Club & Gymnasium
+</h2>
+                <p className='text-lg'>We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home....</p>
               </div>
             </div>
           </div>
@@ -118,9 +119,55 @@ const Homepage = () => {
       </div>
 
 
+{/* 3rd events */}
 
+<div className=' '>
+  <div className='text-center text-black font-bold'>
+<h1 className='text-4xl'>Recent Events</h1>
+<p>Life at Daffodil is very much eventful. Through a lot of meaningful and impactful events students get the <br /> opportunity to develop their skills and portfolio beyond the curriculam
 
+</p>
+  </div>
+<div className='grid grid-cols-3 mt-10 max-w-7xl mx-auto'> 
 
+  <div className="card   md:w-72 lg:w-96 shadow-sm">
+  <figure>
+   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title text-black">Card Title</h2>
+    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div className="card-actions ">
+      <button className="btn  text-white btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>
+  <div className="card  md:w-72 lg:w-96 shadow-sm">
+  <figure>
+   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title text-black">Card Title</h2>
+    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div className="card-actions ">
+      <button className="btn  text-white btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>
+  <div className="card  md:w-72 lg:w-96 shadow-sm">
+  <figure>
+   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title text-black">Card Title</h2>
+    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div className="card-actions">
+      <button className="btn  text-white btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
 
 
 
