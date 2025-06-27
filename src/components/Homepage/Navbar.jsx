@@ -122,6 +122,10 @@ const navItems = [
         title: "Contacts",
         path: "/contacts"
     },
+      {
+        title: "Notice",
+        path: "/notice"
+    },
 ]
 
 export default Navbar;

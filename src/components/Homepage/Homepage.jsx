@@ -169,9 +169,114 @@ const Homepage = () => {
 </div>
 </div>
 
+{/* 4th alumni teachers */}
 
+<div className='mt-10 '>
+  <div className='text-center text-black font-bold'>
+<h1 className='text-4xl'>Teachers Alumni</h1>
+<p className='text-black'>Our Alumni are our pride as they are engaged in building the world through national and International contributions</p>
 
+  </div>
+<div className='grid grid-cols-4 gap-5 mt-10 max-w-7xl mx-auto'> 
 
+  <div className="card   md:w-72 lg:w-80 shadow-sm">
+  <figure>
+   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title text-black">Card Title</h2>
+    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div className="card-actions ">
+      <button className="btn  text-white btn-primary">View Details</button>
+    </div>
+  </div>
+</div>
+  <div className="card  md:w-72 lg:w-80 shadow-sm">
+  <figure>
+   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title text-black">Card Title</h2>
+    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div className="card-actions ">
+      <button className="btn  text-white btn-primary">View Details</button>
+    </div>
+  </div>
+</div>
+  <div className="card  md:w-72 lg:w-80 shadow-sm">
+  <figure>
+   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title text-black">Card Title</h2>
+    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div className="card-actions">
+      <button className="btn  text-white btn-primary">View Details</button>
+    </div>
+  </div>
+</div>
+  <div className="card  md:w-72 lg:w-80 shadow-sm">
+  <figure>
+   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title text-black">Card Title</h2>
+    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div className="card-actions">
+      <button className="btn  text-white btn-primary">View Details</button>
+    </div>
+  </div>
+</div>
+  <div className="card  md:w-72 lg:w-80 shadow-sm">
+  <figure>
+   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title text-black">Card Title</h2>
+    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div className="card-actions">
+      <button className="btn  text-white btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>
+  <div className="card  md:w-72 lg:w-80 shadow-sm">
+  <figure>
+   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title text-black">Card Title</h2>
+    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div className="card-actions">
+      <button className="btn  text-white btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>
+  <div className="card  md:w-72 lg:w-80 shadow-sm">
+  <figure>
+   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title text-black">Card Title</h2>
+    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div className="card-actions">
+      <button className="btn  text-white btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>
+  <div className="card  md:w-72 lg:w-80 shadow-sm">
+  <figure>
+   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title text-black">Card Title</h2>
+    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div className="card-actions">
+      <button className="btn  text-white btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
     </>
 
 
