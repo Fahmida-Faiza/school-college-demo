@@ -2,7 +2,7 @@ import React from 'react'
 
 function Notice() {
   return (
-    <div>
+    <div >
         <div className="overflow-x-auto text-black ">
   <table className="table ">
     {/* head */}
@@ -53,7 +53,7 @@ function Notice() {
   </table>
 </div>
 
-<div className='mt-10 '>
+<div className='mt-10 my-10'>
     <div className="join">
   <input
     className="join-item btn btn-square"
