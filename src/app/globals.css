@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "swiper/css";
+@import "swiper/css/pagination";
+
+@import 'swiper/css/navigation';
+
+@import 'swiper/css/autoplay';
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

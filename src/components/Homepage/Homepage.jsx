@@ -4,7 +4,7 @@ import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { FcLibrary } from "react-icons/fc";
-
+import Testimonial from '../Homepage/Testimonial'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -14,6 +14,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const Homepage = () => {
+
+
+const alumni = new Array(8).fill({
+  img: 'https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp',
+  title: 'Card Title',
+  description:
+    'A card component has a figure, a body part, and inside body there are title and actions parts',
+});
+
+
+
+
   return (
     <>
 
@@ -170,7 +182,7 @@ const Homepage = () => {
 </div>
 
 {/* 4th alumni teachers */}
-
+{/* 
 <div className='mt-10 '>
   <div className='text-center text-black font-bold'>
 <h1 className='text-4xl'>Teachers Alumni</h1>
@@ -276,7 +288,65 @@ const Homepage = () => {
   </div>
 </div>
 </div>
-</div>
+</div> */}
+
+
+ <div className='mt-10'>
+      <div className='text-center text-black font-bold'>
+        <h1 className='text-4xl'>Teachers Alumni</h1>
+        <p className='text-black'>
+          Our Alumni are our pride as they are engaged in building the world
+          through national and International contributions
+        </p>
+      </div>
+
+      <div className='max-w-7xl mx-auto mt-10 px-4'>
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          spaceBetween={30}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+          }}
+          autoplay={{ delay: 3000 }}
+          loop={true}
+          pagination={{ clickable: true }}
+        >
+          {alumni.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className='card md:w-72 lg:w-80 shadow-sm p-2 '>
+                <figure>
+                  <img src={item.img} alt={item.title} />
+                </figure>
+                <div className='card-body'>
+                  <h2 className='card-title text-black'>{item.title}</h2>
+                  <p className='text-black'>{item.description}</p>
+                  <div className='card-actions'>
+                    <button className='btn btn-primary text-white'>
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </div>
+
+ 
+<Testimonial/>
+
+
+
+
+
+
+
+
     </>
 
 

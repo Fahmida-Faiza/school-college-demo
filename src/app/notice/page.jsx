@@ -3,7 +3,7 @@ import React from 'react'
 function Notice() {
   return (
     <div>
-        <div className="overflow-x-auto text-black">
+        <div className="overflow-x-auto text-black ">
   <table className="table ">
     {/* head */}
     <thead className='text-black font-bold text-3xl bg-cyan-300'>
@@ -52,7 +52,24 @@ function Notice() {
     </tbody>
   </table>
 </div>
+
+<div className='mt-10 '>
+    <div className="join">
+  <input
+    className="join-item btn btn-square"
+    type="radio"
+    name="options"
+    aria-label="1"
+    checked="checked" />
+  <input className="join-item btn btn-square " type="radio" name="options" aria-label="2" />
+  <input className="join-item btn btn-square" type="radio" name="options" aria-label="3" />
+  <input className="join-item btn btn-square" type="radio" name="options" aria-label="4" />
+</div>
+</div>
+
+
     </div>
+    
   )
 }
 
