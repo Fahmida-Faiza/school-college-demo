@@ -144,7 +144,7 @@ const alumni = new Array(8).fill({
 
   <div className="card   md:w-72 lg:w-96 shadow-sm">
   <figure>
-   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
+   <img src="pic.jpg" alt="" />
   </figure>
   <div className="card-body">
     <h2 className="card-title text-black">Card Title</h2>
@@ -156,7 +156,7 @@ const alumni = new Array(8).fill({
 </div>
   <div className="card  md:w-72 lg:w-96 shadow-sm">
   <figure>
-   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
+   <img src="pic.jpg" alt="" />
   </figure>
   <div className="card-body">
     <h2 className="card-title text-black">Card Title</h2>
@@ -168,7 +168,7 @@ const alumni = new Array(8).fill({
 </div>
   <div className="card  md:w-72 lg:w-96 shadow-sm">
   <figure>
-   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
+   <img src="pic.jpg" alt="" />
   </figure>
   <div className="card-body">
     <h2 className="card-title text-black">Card Title</h2>

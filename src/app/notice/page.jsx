@@ -2,7 +2,7 @@ import React from 'react'
 
 function Notice() {
   return (
-    <div >
+    <div  className='max-w-7xl mx-auto my-8'>
         <div className="overflow-x-auto text-black ">
   <table className="table ">
     {/* head */}
