@@ -62,7 +62,7 @@ function About() {
                             <figure>
                                 <Image
                                     src="/9187604.png" width="1000" height="4000" 
-                                    className="" />
+                                    className="" alt="" />
                             </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title">Annabelle Perry</h2>

@@ -140,7 +140,7 @@ const alumni = new Array(8).fill({
 
 </p>
   </div>
-<div className='grid grid-cols-3 mt-10 max-w-7xl mx-auto'> 
+<div className='grid lg:grid-cols-3 mt-10 max-w-7xl mx-auto'> 
 
   <div className="card   md:w-72 lg:w-96 shadow-sm">
   <figure>
@@ -300,7 +300,7 @@ const alumni = new Array(8).fill({
         </p>
       </div>
 
-      <div className='max-w-7xl mx-auto mt-10 px-4'>
+      <div className='max-w-7xl mx-auto mt-10 px-4  '>
         <Swiper
           modules={[Autoplay, Pagination]}
           spaceBetween={30}
@@ -317,7 +317,7 @@ const alumni = new Array(8).fill({
         >
           {alumni.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className='card md:w-72 lg:w-80 shadow-sm p-2 '>
+              <div className='  card md:w-72 lg:w-80 shadow-sm p-2 '>
                 <figure>
                   <img src={item.img} alt={item.title} />
                 </figure>

@@ -34,6 +34,7 @@ const Navbar = () => {
                             <Link href="" className="">Payment</Link>
                         </div>
                     
+                    
                  
                
 
@@ -86,10 +87,12 @@ const Navbar = () => {
                         {/* ............................................... */}
                     </ul>
                 </div>
-                {/* <div className="navbar-end">
+                <div className="navbar-end">
+                          <div>
+                            <Link href="/signIn" className=" btn btn-accent">Login</Link>
+                        </div>   
 
-
-                </div> */}
+                </div>
             </div>
         </div>
     );
@@ -126,6 +129,7 @@ const navItems = [
         title: "Notice",
         path: "/notice"
     },
+    
 ]
 
 export default Navbar;
