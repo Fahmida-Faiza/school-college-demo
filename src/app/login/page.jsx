@@ -27,11 +27,11 @@ const page = () => {
     
     return (
         <div className='container mx-auto px-24 bg-slate-100 text-black my-10'>
-            <div className='grid grid-cols-2 gap-12'>
-                <div className='py-10'>
+            <div className='grid md:grid-cols-1 lg:grid-cols-2 lg:gap-12'>
+                <div className='  md: py-4 lg:py-10'>
                     <Image src="/pic.jpg" height="400" width="540" alt="login" />
                 </div>
-                <div className='border-2 p-12 '>
+                <div className='border-2 lg:p-12 '>
                     <form onSubmit={handleLogin} action="" >
                         <h1 className='text-3xl text-green-400'>Login page</h1>
                         <label htmlFor="email">Email</label><br></br>

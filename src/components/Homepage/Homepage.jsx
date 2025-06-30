@@ -16,12 +16,12 @@ import Link from 'next/link';
 const Homepage = () => {
 
 
-const alumni = new Array(8).fill({
-  img: 'https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp',
-  title: 'Card Title',
-  description:
-    'A card component has a figure, a body part, and inside body there are title and actions parts',
-});
+  const alumni = new Array(8).fill({
+    img: 'https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp',
+    title: 'Card Title',
+    description:
+      'A card component has a figure, a body part, and inside body there are title and actions parts',
+  });
 
 
 
@@ -63,7 +63,7 @@ const alumni = new Array(8).fill({
 
       {/* 2nd */}
 
-      <div className='text-black lg:flex gap-10 lg:p-10'>
+      <div className='text-black lg:flex gap-10 lg:p-10 w-80 md:w-3/4 lg:w-full mx-auto'>
 
         <div className='mt-10'>
           <div className='text-xl'>
@@ -96,7 +96,7 @@ const alumni = new Array(8).fill({
                 <p className='text-lg'>We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home....</p>
               </div>
             </div>
-            
+
             <div className='flex gap-5'>
               <FcLibrary className='text-3xl' />
               <div>
@@ -104,7 +104,7 @@ const alumni = new Array(8).fill({
                 <p className='text-lg'>We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home.....</p>
               </div>
             </div>
-            
+
             <div className='flex gap-5'>
               <FcLibrary className='text-3xl' />
               <div>
@@ -112,12 +112,12 @@ const alumni = new Array(8).fill({
                 <p className='text-lg'>We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home....</p>
               </div>
             </div>
-            
+
             <div className='flex gap-5'>
               <FcLibrary className='text-3xl' />
               <div>
                 <h2 className='text-xl font-bold'>Sports Club & Gymnasium
-</h2>
+                </h2>
                 <p className='text-lg'>We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home....</p>
               </div>
             </div>
@@ -125,220 +125,114 @@ const alumni = new Array(8).fill({
         </div>
 
         <div>
-          <img src=" https://daffodilvarsity.edu.bd/template/images/about.jpg " alt="" />
+          <img src=" https://daffodilvarsity.edu.bd/template/images/about.jpg " alt="" className='rounded-2xl' />
         </div>
 
       </div>
 
 
-{/* 3rd events */}
+      {/* 3rd events */}
 
-<div className=' '>
-  <div className='text-center text-black font-bold'>
-<h1 className='text-4xl'>Recent Events</h1>
-<p>Life at Daffodil is very much eventful. Through a lot of meaningful and impactful events students get the <br /> opportunity to develop their skills and portfolio beyond the curriculam
+      <div className=' w-80 md:w-3/4 lg:w-full mx-auto'>
+        <div className='text-center text-black font-bold'>
+          <h1 className='text-4xl mt-10'>Recent Events</h1>
+          <p>Life at Daffodil is very much eventful. Through a lot of meaningful and impactful events students get the <br /> opportunity to develop their skills and portfolio beyond the curriculam
 
-</p>
-  </div>
-<div className='grid lg:grid-cols-3 mt-10 max-w-7xl mx-auto'> 
+          </p>
+        </div>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-5 max-w-7xl mx-auto'>
 
-  <div className="card   md:w-72 lg:w-96 shadow-sm">
-  <figure>
-   <img src="pic.jpg" alt="" />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title text-black">Card Title</h2>
-    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-    <div className="card-actions ">
-      <button className="btn  text-white btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
-  <div className="card  md:w-72 lg:w-96 shadow-sm">
-  <figure>
-   <img src="pic.jpg" alt="" />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title text-black">Card Title</h2>
-    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-    <div className="card-actions ">
-      <button className="btn  text-white btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
-  <div className="card  md:w-72 lg:w-96 shadow-sm">
-  <figure>
-   <img src="pic.jpg" alt="" />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title text-black">Card Title</h2>
-    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-    <div className="card-actions">
-      <button className="btn  text-white btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-
-{/* 4th alumni teachers */}
-{/* 
-<div className='mt-10 '>
-  <div className='text-center text-black font-bold'>
-<h1 className='text-4xl'>Teachers Alumni</h1>
-<p className='text-black'>Our Alumni are our pride as they are engaged in building the world through national and International contributions</p>
-
-  </div>
-<div className='grid grid-cols-4 gap-5 mt-10 max-w-7xl mx-auto'> 
-
-  <div className="card   md:w-72 lg:w-80 shadow-sm">
-  <figure>
-   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title text-black">Card Title</h2>
-    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-    <div className="card-actions ">
-      <button className="btn  text-white btn-primary">View Details</button>
-    </div>
-  </div>
-</div>
-  <div className="card  md:w-72 lg:w-80 shadow-sm">
-  <figure>
-   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title text-black">Card Title</h2>
-    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-    <div className="card-actions ">
-      <button className="btn  text-white btn-primary">View Details</button>
-    </div>
-  </div>
-</div>
-  <div className="card  md:w-72 lg:w-80 shadow-sm">
-  <figure>
-   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title text-black">Card Title</h2>
-    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-    <div className="card-actions">
-      <button className="btn  text-white btn-primary">View Details</button>
-    </div>
-  </div>
-</div>
-  <div className="card  md:w-72 lg:w-80 shadow-sm">
-  <figure>
-   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title text-black">Card Title</h2>
-    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-    <div className="card-actions">
-      <button className="btn  text-white btn-primary">View Details</button>
-    </div>
-  </div>
-</div>
-  <div className="card  md:w-72 lg:w-80 shadow-sm">
-  <figure>
-   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title text-black">Card Title</h2>
-    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-    <div className="card-actions">
-      <button className="btn  text-white btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
-  <div className="card  md:w-72 lg:w-80 shadow-sm">
-  <figure>
-   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title text-black">Card Title</h2>
-    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-    <div className="card-actions">
-      <button className="btn  text-white btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
-  <div className="card  md:w-72 lg:w-80 shadow-sm">
-  <figure>
-   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title text-black">Card Title</h2>
-    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-    <div className="card-actions">
-      <button className="btn  text-white btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
-  <div className="card  md:w-72 lg:w-80 shadow-sm">
-  <figure>
-   <img src="https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp" alt="" />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title text-black">Card Title</h2>
-    <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-    <div className="card-actions">
-      <button className="btn  text-white btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
-</div>
-</div> */}
-
-
- <div className='mt-10'>
-      <div className='text-center text-black font-bold'>
-        <h1 className='text-4xl'>Teachers Alumni</h1>
-        <p className='text-black'>
-          Our Alumni are our pride as they are engaged in building the world
-          through national and International contributions
-        </p>
+          <div className="card   md:w-72 lg:w-96 shadow-sm">
+            <figure>
+              <img src="pic.jpg" alt="" />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title text-black">Card Title</h2>
+              <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              <div className="card-actions ">
+                <button className="btn  text-white btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          <div className="card  md:w-72 lg:w-96 shadow-sm">
+            <figure>
+              <img src="pic.jpg" alt="" />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title text-black">Card Title</h2>
+              <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              <div className="card-actions ">
+                <button className="btn  text-white btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          <div className="card  md:w-72 lg:w-96 shadow-sm">
+            <figure>
+              <img src="pic.jpg" alt="" />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title text-black">Card Title</h2>
+              <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+              <div className="card-actions">
+                <button className="btn  text-white btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className='max-w-7xl mx-auto mt-10 px-4  '>
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          spaceBetween={30}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-            1280: { slidesPerView: 4 },
-          }}
-          autoplay={{ delay: 3000 }}
-          loop={true}
-          pagination={{ clickable: true }}
-        >
-          {alumni.map((item, index) => (
-            <SwiperSlide key={index}>
-              <div className='  card md:w-72 lg:w-80 shadow-sm p-2 '>
-                <figure>
-                  <img src={item.img} alt={item.title} />
-                </figure>
-                <div className='card-body'>
-                  <h2 className='card-title text-black'>{item.title}</h2>
-                  <p className='text-black'>{item.description}</p>
-                  <div className='card-actions'>
-                    <button className='btn btn-primary text-white'>
-                      View Details
-                    </button>
+      {/* 4th alumni teachers */}
+
+
+
+      <div className='mt-10'>
+        <div className='text-center text-black font-bold'>
+          <h1 className='text-4xl mt-10'>Teachers Alumni</h1>
+          <p className='text-black'>
+            Our Alumni are our pride as they are engaged in building the world
+            through national and International contributions
+          </p>
+        </div>
+
+        <div className='max-w-7xl mx-auto mt-10 px-4  '>
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            spaceBetween={30}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+            }}
+            autoplay={{ delay: 3000 }}
+            loop={true}
+            pagination={{ clickable: true }}
+          >
+            {alumni.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div className='  card md:w-72 lg:w-80 shadow-sm p-2 '>
+                  <figure>
+                    <img src={item.img} alt={item.title} />
+                  </figure>
+                  <div className='card-body'>
+                    <h2 className='card-title text-black'>{item.title}</h2>
+                    <p className='text-black'>{item.description}</p>
+                    <div className='card-actions'>
+                      <button className='btn btn-primary text-white'>
+                        View Details
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
-    </div>
 
- 
-<Testimonial/>
+
+      <Testimonial />
 
 
 

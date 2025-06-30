@@ -45,12 +45,12 @@ const SignUpPage = () => {
             <h1 className='text-3xl text-center text-red-400'>Signup page</h1> 
             <div className='container mx-auto px-24 bg-slate-100 text-black my-10'>
                 
-                <div className='grid grid-cols-2 gap-12'>
-                    <div className='py-10'>
+                <div className='grid  lg:grid-cols-2 lg:gap-12'>
+                    <div className='lg:py-10'>
                         <Image src="/pic2.png" height="400" width="540" alt="login" />
                     </div>
                     {/* <h1 className='text-3xl text-red-400'>Signup page</h1> */}
-                    <div className='border-2 p-12 '>
+                    <div className='border-2 lg:p-12 '>
                         <form onSubmit={handleSignUp} action="">
                             <label htmlFor="name">Name</label><br></br>  
                             <input type="text" name="name" placeholder="your name" className="mt-3 input input-bordered w-full max-w-xs  bg-white text-black" />
