@@ -8,7 +8,7 @@ const Student = () => {
     // const {services} = await getServices()
     // const data = await getServices()
     // console.log(data.services)
-
+// border-b-2 pb-5  p-5
 
     const [services, setServices] = useState([])
 
@@ -18,16 +18,21 @@ const Student = () => {
             .then(data => setServices(data))
     }, [])
     return (
-        <div className='text-black'>
-            hi this is student details all
+        <div className='text-black  '>
+           <h1 className='p-5'>
+           
+                 <h2><button className="btn btn-secondary text-white">Add Student</button></h2>
+     
+            
+            </h1> 
 
 
-            <div className='text-black min-h-screen '>
-
-                {/* <h2 className="card-title mx-auto ">our services</h2>
-                        <p className='text-center'>If a dog chews shoes whose shoes does he choose?</p> */}
+ 
+            <div className='text-black min-h-screen mb-10 bg-slate-100'>
+                
 
                 <div className=' mx-auto grid grid-cols-1 lg:grid-cols-3 gap-3'>
+                    
                     {
                         services?.length > 0 && services?.map((service) => (
                             <ServiceCard service={service} key={service.id} />

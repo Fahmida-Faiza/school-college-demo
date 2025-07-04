@@ -6,7 +6,7 @@ const ServiceCard = ({ service }) => {
     const { name, image, price, _id } = service
     return (
         <div className='mx-auto'>
-            <div className="card bg-base-100 w-96 shadow-xl">
+            <div className="card text-black lg:w-96 md:w-80 shadow-xl">
                 <figure className="px-10 pt-10">
                     <Image src={image} height={120} width={430}  alt={name} />
                 </figure>
