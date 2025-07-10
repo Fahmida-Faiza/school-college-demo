@@ -2,8 +2,8 @@ import React from 'react';
 
 const AddTeacherForm = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6  shadow-lg rounded-xl mt-10 bg-teal-100 mb-32">
-      <h2 className="text-3xl font-bold mb-6 text-center text-blue-700">Add Teacher</h2>
+    <div className="max-w-4xl mx-auto p-6  shadow-lg rounded-xl mt-10 bg-teal-50 mb-32">
+      <h2 className="text-3xl font-bold mb-6 text-center text-blue-700"> 👨‍🏫 Add Teacher</h2>
       
       <form className="grid grid-cols-1 md:grid-cols-2 gap-6 text-black">
         <div className="form-control">

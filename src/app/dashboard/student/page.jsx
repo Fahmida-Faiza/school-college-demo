@@ -2,7 +2,7 @@ import React from 'react';
 
 const AddStudentForm = () => {
   return (
-    <div className="max-w-5xl mx-auto p-8 text-black shadow-2xl rounded-2xl mt-10 mb-32">
+    <div className="max-w-5xl mx-auto p-8 text-black shadow-2xl rounded-2xl mt-10 mb-32 bg-purple-50">
       <h2 className="text-4xl font-bold text-center text-purple-700 mb-10">🎓 Add New Student</h2>
 
       <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
