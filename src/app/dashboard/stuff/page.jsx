@@ -42,7 +42,7 @@ const AddStaffForm = () => {
             <div className="form-control">
               <label className="label">Blood Group</label>
               <select className="select select-bordered  bg-white">
-                <option disabled selected>Select Blood Group</option>
+                <option disabled defaultValue="">Select Blood Group</option>
                 <option>A+</option>
                 <option>A-</option>
                 <option>B+</option>

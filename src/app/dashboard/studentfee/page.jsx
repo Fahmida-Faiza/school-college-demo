@@ -22,7 +22,7 @@ const StudentFeeForm = () => {
               <span className="label-text font-semibold">Class</span>
             </label>
             <select className="select select-bordered bg-white ">
-              <option disabled selected>Select Class</option>
+              <option disabled defaultValue="">Select Class</option>
               <option>Class 1</option>
               <option>Class 2</option>
               <option>Class 3</option>

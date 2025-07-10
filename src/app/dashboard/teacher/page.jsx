@@ -44,7 +44,7 @@ const AddTeacherForm = () => {
         <div className="form-control">
           <label className="label">Blood Group</label>
           <select className="select bg-white select-bordered">
-            <option disabled selected>Select</option>
+            <option disabled defaultValue="">Select</option>
             <option>A+</option>
             <option>A-</option>
             <option>B+</option>
