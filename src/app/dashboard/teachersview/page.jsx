@@ -1,8 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 
+/* ---------- 17 demo teachers ---------- */
 const teachers = [
-  // Previous 7 teachers
   {
     id: 1,
     name: 'Md. Rafiq Hasan',
@@ -108,8 +108,6 @@ const teachers = [
     nid: '2233445566',
     photo: 'https://via.placeholder.com/150',
   },
-
-  // 10 new teachers
   {
     id: 8,
     name: 'Jannatul Ferdous',
@@ -264,18 +262,20 @@ const teachers = [
 
 const ITEMS_PER_PAGE = 5;
 
+/* ------------------- component ------------------- */
 export default function TeacherTable() {
   const [selectedId, setSelectedId] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
 
   const selectedTeacher = teachers.find((t) => t.id === selectedId);
 
-  // Pagination calculations
+  /* pagination */
   const totalPages = Math.ceil(teachers.length / ITEMS_PER_PAGE);
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const currentTeachers = teachers.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const currentTeachers = teachers.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE,
+  );
 
-  // Handle page change and close detail if open
   function goToPage(page) {
     setCurrentPage(page);
     setSelectedId(null);
@@ -285,9 +285,9 @@ export default function TeacherTable() {
     <div className="max-w-7xl mx-auto px-4 py-8 bg-white text-black">
       <h2 className="text-3xl font-bold text-center mb-6">Teachers</h2>
 
-      {/* Table */}
+      {/* ---------- table ---------- */}
       <div className="overflow-x-auto border rounded-lg bg-white">
-        <table className="table table-zebra w-full text-sm sm:text-base ">
+        <table className="table table-zebra w-full text-sm sm:text-base">
           <thead className="bg-blue-800 text-white">
             <tr>
               <th>Photo</th>
@@ -297,7 +297,7 @@ export default function TeacherTable() {
               <th>Details</th>
             </tr>
           </thead>
-          <tbody >
+          <tbody>
             {currentTeachers.map((teacher) => (
               <tr key={teacher.id}>
                 <td>
@@ -324,41 +324,36 @@ export default function TeacherTable() {
         </table>
       </div>
 
-      {/* Pagination */}
+      {/* ---------- pagination ---------- */}
       <div className="flex justify-center mt-4 space-x-2">
         <button
+          className="btn btn-sm btn-outline"
           disabled={currentPage === 1}
           onClick={() => goToPage(currentPage - 1)}
-          className="btn btn-sm btn-outline"
         >
           Prev
         </button>
-
-        {[...Array(totalPages)].map((_, i) => {
-          const page = i + 1;
-          return (
-            <button
-              key={page}
-              onClick={() => goToPage(page)}
-              className={`btn btn-sm ${
-                page === currentPage ? 'btn-primary' : 'btn-outline'
-              }`}
-            >
-              {page}
-            </button>
-          );
-        })}
-
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+          <button
+            key={page}
+            onClick={() => goToPage(page)}
+            className={`btn btn-sm ${
+              page === currentPage ? 'btn-primary' : 'btn-outline'
+            }`}
+          >
+            {page}
+          </button>
+        ))}
         <button
+          className="btn btn-sm btn-outline"
           disabled={currentPage === totalPages}
           onClick={() => goToPage(currentPage + 1)}
-          className="btn btn-sm btn-outline"
         >
           Next
         </button>
       </div>
 
-      {/* Details Section */}
+      {/* ---------- detail panel ---------- */}
       {selectedTeacher && (
         <div className="mt-8 p-6 bg-white border rounded-lg shadow">
           <h3 className="text-xl font-bold mb-4">
@@ -366,7 +361,6 @@ export default function TeacherTable() {
           </h3>
 
           <div className="flex flex-col lg:flex-row gap-6">
-            {/* Full Image */}
             <div className="flex justify-center lg:justify-start">
               <img
                 src={selectedTeacher.photo}
@@ -375,23 +369,44 @@ export default function TeacherTable() {
               />
             </div>
 
-            {/* Details */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm w-full">
-              <p><strong>Father's Name:</strong> {selectedTeacher.fatherName}</p>
-              <p><strong>Mother's Name:</strong> {selectedTeacher.motherName}</p>
-              <p><strong>Date of Birth:</strong> {selectedTeacher.dob}</p>
-              <p><strong>Email:</strong> {selectedTeacher.email}</p>
-              <p><strong>Blood Group:</strong> {selectedTeacher.bloodGroup}</p>
-              <p><strong>Present Address:</strong> {selectedTeacher.presentAddress}</p>
-              <p><strong>Permanent Address:</strong> {selectedTeacher.permanentAddress}</p>
-              <p><strong>NID:</strong> {selectedTeacher.nid}</p>
+              <p>
+                <strong>Father's Name:</strong> {selectedTeacher.fatherName}
+              </p>
+              <p>
+                <strong>Mother's Name:</strong> {selectedTeacher.motherName}
+              </p>
+              <p>
+                <strong>Date of Birth:</strong> {selectedTeacher.dob}
+              </p>
+              <p>
+                <strong>Email:</strong> {selectedTeacher.email}
+              </p>
+              <p>
+                <strong>Blood Group:</strong> {selectedTeacher.bloodGroup}
+              </p>
+              <p>
+                <strong>Present Address:</strong>{' '}
+                {selectedTeacher.presentAddress}
+              </p>
+              <p>
+                <strong>Permanent Address:</strong>{' '}
+                {selectedTeacher.permanentAddress}
+              </p>
+              <p>
+                <strong>NID:</strong> {selectedTeacher.nid}
+              </p>
             </div>
           </div>
 
-          {/* Action Buttons at Bottom */}
+          {/* action buttons */}
           <div className="flex flex-col sm:flex-row justify-end gap-2 mt-6">
-            <button className="btn btn-sm btn-warning w-full sm:w-auto">Update</button>
-            <button className="btn btn-sm btn-error w-full sm:w-auto">Delete</button>
+            <button className="btn btn-sm btn-warning w-full sm:w-auto">
+              Update
+            </button>
+            <button className="btn btn-sm btn-error w-full sm:w-auto">
+              Delete
+            </button>
             <button
               className="btn btn-sm btn-outline w-full sm:w-auto"
               onClick={() => setSelectedId(null)}
