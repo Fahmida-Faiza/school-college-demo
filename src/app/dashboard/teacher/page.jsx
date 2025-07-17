@@ -1,10 +1,12 @@
+import Link from 'next/link';
 import React from 'react';
 
 const AddTeacherForm = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6  shadow-lg rounded-xl mt-10 bg-teal-50 mb-32">
+    <div className="max-w-4xl mx-auto p-6  shadow-lg rounded-xl mt-10 bg-teal-50 mb-32 relative">
+
       <h2 className="text-3xl font-bold mb-6 text-center text-blue-700"> 👨‍🏫 Add Teacher</h2>
-      
+
       <form className="grid grid-cols-1 md:grid-cols-2 gap-6 text-black">
         <div className="form-control">
           <label className="label">Name</label>
@@ -12,12 +14,12 @@ const AddTeacherForm = () => {
         </div>
 
         <div className="form-control">
-          <label className="label">Father's Name</label>
+          <label className="label">Father&apos;s Name</label>
           <input type="text" placeholder="Father's Name" className="input bg-white input-bordered" />
         </div>
 
         <div className="form-control">
-          <label className="label">Mother's Name</label>
+          <label className="label">Mother&apos;s Name</label>
           <input type="text" placeholder="Mother's Name" className="input bg-white input-bordered" />
         </div>
 
@@ -78,6 +80,7 @@ const AddTeacherForm = () => {
 
         <div className="form-control md:col-span-2 mt-4">
           <button className="btn btn-info w-full">Add Teacher</button>
+          <Link href="/dashboard"><button className="btn btn-ghost w-full mt-5">Go Back</button></Link>
         </div>
       </form>
     </div>

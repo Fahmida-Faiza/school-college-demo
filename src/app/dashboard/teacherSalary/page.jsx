@@ -1,29 +1,14 @@
-"use client"
 
-import React, { useState } from 'react';
+import React from 'react';
 
 const SalaryForm = () => {
-  const [position, setPosition] = useState('');
-  const [salary, setSalary] = useState('');
 
-  const handlePositionChange = (e) => {
-    const selected = e.target.value;
-    setPosition(selected);
-
-    if (selected === 'Teacher') {
-      setSalary('25000');
-    } else if (selected === 'Staff') {
-      setSalary('5000');
-    } else {
-      setSalary('');
-    }
-  };
 
   return (
-    <div className="max-w-xl mx-auto mt-12 text-black mb-32">
+        <div className="max-w-xl mx-auto mt-12 text-black mb-32">
       <div className="card shadow-xl border border-blue-100 rounded-3xl p-8">
         <h2 className="text-3xl font-bold text-center text-blue-700 mb-6">
-          💼 Salary Entry
+          💼 Teacher Salary Entry
         </h2>
 
         <form className="flex flex-col gap-5">
@@ -37,28 +22,23 @@ const SalaryForm = () => {
             />
           </div>
 
-          {/* Position Dropdown */}
+          {/* Manual Position Input */}
           <div className="form-control">
             <label className="label font-semibold">Position</label>
-            <select
-              className="select select-bordered w-full bg-white"
-              value={position}
-              onChange={handlePositionChange}
-            >
-              <option disabled value="">Select Position</option>
-              <option>Teacher</option>
-              <option>Staff</option>
-            </select>
+            <input
+              type="text"
+              placeholder="Teacher"
+              className="input input-bordered w-full bg-white" readOnly
+            />
           </div>
 
-          {/* Auto-filled Salary */}
+          {/* Salary Input (editable only if not Staff) */}
           <div className="form-control">
             <label className="label font-semibold">Salary Amount (৳)</label>
             <input
               type="number"
-              value={salary}
-              readOnly
-              className="input input-bordered w-full bg-gray-100 text-gray-700"
+              className='input input-bordered w-full'
+              placeholder="Enter salary amount"  min="0"
             />
           </div>
 

@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 const staff = [
@@ -39,8 +40,10 @@ export default function StuffsSalaryView() {
   }
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8 bg-white text-black">
+    <div className="max-w-5xl mx-auto px-4 py-8 bg-white text-black relative">
       <h2 className="text-3xl font-bold text-center mb-6">Staff Salary View</h2>
+      <Link href="/dashboard/staffSalary"><button className='btn btn-accent absolute top-8 right-4'>Pay Staff Salary</button></Link>
+
 
       {!selectedId && (
         <>
@@ -133,7 +136,7 @@ export default function StuffsSalaryView() {
             <p><strong>Position:</strong> {selectedStaff.position}</p>
             <p><strong>Salary:</strong> {selectedStaff.salary.toLocaleString()} ৳</p>
             <p><strong>Phone:</strong> {selectedStaff.phone}</p>
-            <p><strong>Status:</strong>
+            <div><strong>Status:</strong>
               <div className="flex items-center space-x-6 mt-2">
                 {['Pending', 'OK'].map((st) => (
                   <label key={st} className="flex items-center space-x-2 cursor-pointer">
@@ -151,7 +154,7 @@ export default function StuffsSalaryView() {
                   </label>
                 ))}
               </div>
-            </p>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-end gap-2 mt-6">

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 const CostingForm = () => {
@@ -89,6 +90,7 @@ const CostingForm = () => {
 
           <div className="form-control md:col-span-2 mt-4">
             <button className="btn btn-primary w-full text-lg">Save Cost Entry</button>
+            <Link href="/dashboard"><button className="btn btn-ghost w-full mt-5">Go Back</button></Link>
           </div>
 
         </form>

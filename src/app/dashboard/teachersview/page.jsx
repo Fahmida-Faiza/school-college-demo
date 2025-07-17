@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 /* ---------- 17 demo teachers ---------- */
@@ -282,8 +283,10 @@ export default function TeacherTable() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 bg-white text-black">
+    <div className="max-w-7xl mx-auto px-4 py-8 bg-white text-black relative">
       <h2 className="text-3xl font-bold text-center mb-6">Teachers</h2>
+      <Link href="/dashboard/teacher"><button className='btn btn-primary absolute top-8 right-4'>Add Teacher</button></Link>
+
 
       {/* ---------- table ---------- */}
       <div className="overflow-x-auto border rounded-lg bg-white">
@@ -337,9 +340,8 @@ export default function TeacherTable() {
           <button
             key={page}
             onClick={() => goToPage(page)}
-            className={`btn btn-sm ${
-              page === currentPage ? 'btn-primary' : 'btn-outline'
-            }`}
+            className={`btn btn-sm ${page === currentPage ? 'btn-primary' : 'btn-outline'
+              }`}
           >
             {page}
           </button>
@@ -371,10 +373,10 @@ export default function TeacherTable() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm w-full">
               <p>
-                <strong>Father's Name:</strong> {selectedTeacher.fatherName}
+                <strong>Father&apos;s Name:</strong> {selectedTeacher.fatherName}
               </p>
               <p>
-                <strong>Mother's Name:</strong> {selectedTeacher.motherName}
+                <strong>Mother&apos;s Name:</strong> {selectedTeacher.motherName}
               </p>
               <p>
                 <strong>Date of Birth:</strong> {selectedTeacher.dob}

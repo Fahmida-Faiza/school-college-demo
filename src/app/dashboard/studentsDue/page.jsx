@@ -2,77 +2,72 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-/* ---------- teacher data (add more if you like) ---------- */
-const teachers = [
-  { id: 1, name: 'Md. Rafiq Hasan', position: 'Math Teacher', salary: 35000, phone: '017xxxxxxx1', status: 'Pending' },
-  { id: 2, name: 'Afsana Jahan', position: 'English Teacher', salary: 32000, phone: '018xxxxxxx2', status: 'OK' },
-  { id: 3, name: 'Sajib Ahmed', position: 'Computer Science Teacher', salary: 40000, phone: '019xxxxxxx3', status: 'OK' },
-  { id: 4, name: 'Nusrat Jahan', position: 'Education Teacher', salary: 30000, phone: '016xxxxxxx4', status: 'Pending' },
-  { id: 5, name: 'Rana Biswas', position: 'Physics Teacher', salary: 38000, phone: '015xxxxxxx5', status: 'OK' },
-  { id: 6, name: 'Farhana Akter', position: 'Bengali Teacher', salary: 31000, phone: '017xxxxxxx6', status: 'Pending' },
+/* ---------- student data ---------- */
+const students = [
+  { id: 1, name: 'Tanvir Rahman', class: 'Class 10', due: 2500, phone: '017xxxxxxx1', status: 'Due' },
+  { id: 2, name: 'Mim Akter', class: 'Class 9', due: 0, phone: '018xxxxxxx2', status: 'Paid' },
+  { id: 3, name: 'Riyad Hasan', class: 'Class 8', due: 1500, phone: '019xxxxxxx3', status: 'Due' },
+  { id: 4, name: 'Nadia Islam', class: 'Class 7', due: 0, phone: '016xxxxxxx4', status: 'Paid' },
+  { id: 5, name: 'Fahim Rahman', class: 'Class 10', due: 3000, phone: '015xxxxxxx5', status: 'Due' },
+  { id: 6, name: 'Rupa Khatun', class: 'Class 9', due: 1000, phone: '017xxxxxxx6', status: 'Due' },
 ];
 
 const ITEMS_PER_PAGE = 5;
 
-/* ---------- component ---------- */
-export default function TeacherSalaryView() {
+export default function StudentDueList() {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedId, setSelectedId] = useState(null);
   const [statusData, setStatusData] = useState(
-    teachers.reduce((acc, t) => { acc[t.id] = t.status; return acc; }, {})
+    students.reduce((acc, s) => { acc[s.id] = s.status; return acc; }, {})
   );
 
-  /* pagination helpers */
-  const totalPages = Math.ceil(teachers.length / ITEMS_PER_PAGE);
-  const currentTeachers = teachers.slice(
-    (currentPage - 1) * ITEMS_PER_PAGE,
-    currentPage * ITEMS_PER_PAGE
-  );
-  const selectedTeacher = teachers.find(t => t.id === selectedId);
+  const totalPages = Math.ceil(students.length / ITEMS_PER_PAGE);
+  const currentStudents = students.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
+  const selectedStudent = students.find(s => s.id === selectedId);
 
   function goToPage(p) { setCurrentPage(p); setSelectedId(null); }
   function changeStatus(id, val) { setStatusData(prev => ({ ...prev, [id]: val })); }
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8 bg-white text-black relative">
-      <h2 className="text-3xl font-bold text-center mb-6">Teacher Salary View</h2>
-      <Link href="/dashboard/teacherSalary"><button className='btn btn-info absolute top-8 right-4'>Pay Teacher Salary</button></Link>
+      <h2 className="text-3xl font-bold text-center mb-6">Student Due List</h2>
+      <Link href="/dashboard/studentfee"><button className='btn btn-primary absolute top-8 right-4'>Take Student Fee</button></Link>
 
       {/* ------------ list ------------- */}
-      {!selectedTeacher && (
+      {!selectedStudent && (
         <>
           <div className="overflow-x-auto border rounded-lg bg-white">
             <table className="table table-zebra w-full text-sm sm:text-base">
               <thead className="bg-blue-800 text-white">
                 <tr>
                   <th>Name</th>
-                  <th>Position</th>
-                  <th>Salary (৳)</th>
+                  <th>Class</th>
+                  <th>Due (৳)</th>
                   <th>Phone</th>
                   <th>Status</th>
                   <th>Details</th>
                 </tr>
               </thead>
               <tbody>
-                {currentTeachers.map(t => (
-                  <tr key={t.id}>
-                    <td>{t.name}</td>
-                    <td>{t.position}</td>
-                    <td>{t.salary.toLocaleString()}</td>
-                    <td>{t.phone}</td>
+                {currentStudents.map(s => (
+                  <tr key={s.id}>
+                    <td>{s.name}</td>
+                    <td>{s.class}</td>
+                    <td>{s.due.toLocaleString()}</td>
+                    <td>{s.phone}</td>
                     <td>
                       <div className="flex space-x-3 justify-center">
-                        {['Pending', 'OK'].map(st => (
+                        {['Due', 'Paid'].map(st => (
                           <label key={st} className="flex items-center space-x-1 cursor-pointer">
                             <input
                               type="radio"
-                              name={`status-${t.id}`}
+                              name={`status-${s.id}`}
                               value={st}
-                              checked={statusData[t.id] === st}
-                              onChange={() => changeStatus(t.id, st)}
-                              className={`radio ${st === 'OK' ? 'checked:bg-green-500' : 'checked:bg-red-500'}`}
+                              checked={statusData[s.id] === st}
+                              onChange={() => changeStatus(s.id, st)}
+                              className={`radio ${st === 'Paid' ? 'checked:bg-green-500' : 'checked:bg-red-500'}`}
                             />
-                            <span className="text-sm">{st === 'OK' ? 'Active' : 'Pending'}</span>
+                            <span className="text-sm">{st}</span>
                           </label>
                         ))}
                       </div>
@@ -80,7 +75,7 @@ export default function TeacherSalaryView() {
                     <td>
                       <button
                         className="btn btn-sm btn-outline btn-info"
-                        onClick={() => setSelectedId(t.id)}
+                        onClick={() => setSelectedId(s.id)}
                       >
                         View&nbsp;Details
                       </button>
@@ -115,30 +110,30 @@ export default function TeacherSalaryView() {
       )}
 
       {/* ------------ detail panel ------------- */}
-      {selectedTeacher && (
+      {selectedStudent && (
         <div className="mt-8 p-6 bg-white border rounded-lg shadow max-w-md mx-auto">
           <h3 className="text-xl font-bold mb-4">
-            Details for: {selectedTeacher.name}
+            Details for: {selectedStudent.name}
           </h3>
 
           <div className="grid grid-cols-1 gap-4 text-sm">
-            <p><strong>Position:</strong> {selectedTeacher.position}</p>
-            <p><strong>Salary:</strong> {selectedTeacher.salary.toLocaleString()} ৳</p>
-            <p><strong>Phone:</strong> {selectedTeacher.phone}</p>
+            <p><strong>Class:</strong> {selectedStudent.class}</p>
+            <p><strong>Due:</strong> {selectedStudent.due.toLocaleString()} ৳</p>
+            <p><strong>Phone:</strong> {selectedStudent.phone}</p>
             <div>
               <strong>Status:</strong>
               <div className="flex items-center space-x-6 mt-2">
-                {['Pending', 'OK'].map(st => (
+                {['Due', 'Paid'].map(st => (
                   <label key={st} className="flex items-center space-x-2 cursor-pointer">
                     <input
                       type="radio"
                       name="detail-status"
                       value={st}
-                      checked={statusData[selectedTeacher.id] === st}
-                      onChange={() => changeStatus(selectedTeacher.id, st)}
-                      className={`radio ${st === 'OK' ? 'checked:bg-green-500' : 'checked:bg-red-500'}`}
+                      checked={statusData[selectedStudent.id] === st}
+                      onChange={() => changeStatus(selectedStudent.id, st)}
+                      className={`radio ${st === 'Paid' ? 'checked:bg-green-500' : 'checked:bg-red-500'}`}
                     />
-                    <span>{st === 'OK' ? 'Active' : 'Pending'}</span>
+                    <span>{st}</span>
                   </label>
                 ))}
               </div>

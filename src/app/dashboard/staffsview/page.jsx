@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 const staffs = [
@@ -172,8 +173,10 @@ export default function StaffView() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 bg-white text-black">
+    <div className="max-w-7xl mx-auto px-4 py-8 bg-white text-black relative">
       <h2 className="text-3xl font-bold text-center mb-6">Staffs</h2>
+      <Link href="/dashboard/staff"><button className='btn btn-primary absolute top-8 right-4'>Add Staff</button></Link>
+
 
       {/* Table */}
       <div className="overflow-x-auto border rounded-lg bg-white">
@@ -265,8 +268,8 @@ export default function StaffView() {
 
             {/* Details */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm w-full">
-              <p><strong>Father's Name:</strong> {selectedStaff.fatherName}</p>
-              <p><strong>Mother's Name:</strong> {selectedStaff.motherName}</p>
+              <p><strong>Father&apos;s Name:</strong> {selectedStaff.fatherName}</p>
+              <p><strong>Mother&apos;s Name:</strong> {selectedStaff.motherName}</p>
               <p><strong>Date of Birth:</strong> {selectedStaff.dob}</p>
               <p><strong>Email:</strong> {selectedStaff.email}</p>
               <p><strong>Blood Group:</strong> {selectedStaff.bloodGroup}</p>

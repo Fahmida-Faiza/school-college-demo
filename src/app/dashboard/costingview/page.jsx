@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 const costs = [
@@ -102,7 +103,8 @@ export default function ShowAllCosts() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 bg-white text-black">
+    <div className="max-w-7xl mx-auto px-4 py-8 bg-white text-black relative">
+      <Link href="/dashboard/costing"><button className='btn btn-primary absolute right-4'>Add Costing</button></Link>
       <h2 className="text-3xl font-bold text-center mb-6">Costing</h2>
 
       {/* Table */}
@@ -158,9 +160,8 @@ export default function ShowAllCosts() {
             <button
               key={page}
               onClick={() => goToPage(page)}
-              className={`btn btn-sm ${
-                page === currentPage ? 'btn-primary' : 'btn-outline'
-              }`}
+              className={`btn btn-sm ${page === currentPage ? 'btn-primary' : 'btn-outline'
+                }`}
             >
               {page}
             </button>

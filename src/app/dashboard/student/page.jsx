@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const AddStudentForm = () => {
@@ -56,22 +57,22 @@ const AddStudentForm = () => {
         </div>
 
         <div className="form-control">
-          <label className="label">Father's Name</label>
+          <label className="label">Father&apos;s Name</label>
           <input type="text" placeholder="Father's Full Name" className="input  bg-white input-bordered" />
         </div>
 
         <div className="form-control">
-          <label className="label">Mother's Name</label>
+          <label className="label">Mother&apos;s Name</label>
           <input type="text" placeholder="Mother's Full Name" className="input bg-white input-bordered" />
         </div>
 
         <div className="form-control">
-          <label className="label">Father's Phone</label>
+          <label className="label">Father&apos;s Phone</label>
           <input type="tel" placeholder="e.g. 01XXXXXXXXX" className="input bg-white input-bordered" />
         </div>
 
         <div className="form-control">
-          <label className="label">Mother's Phone</label>
+          <label className="label">Mother&apos;s Phone</label>
           <input type="tel" placeholder="e.g. 01XXXXXXXXX" className="input bg-white input-bordered" />
         </div>
 
@@ -100,6 +101,8 @@ const AddStudentForm = () => {
         {/* Submit Button */}
         <div className="form-control md:col-span-2 mt-4">
           <button className="btn btn-primary w-full">Add Student</button>
+          <Link href="/dashboard"><button className="btn btn-ghost w-full mt-5">Go Back</button></Link>
+
         </div>
       </form>
     </div>

@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 const students = [
@@ -300,12 +301,12 @@ export default function StudentTable() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-base w-full">
             <p><strong>Roll:</strong> {selectedStudent.roll}</p>
             <p><strong>Section:</strong> {selectedStudent.section}</p>
-            <p><strong>Father's Name:</strong> {selectedStudent.fatherName}</p>
-            <p><strong>Mother's Name:</strong> {selectedStudent.motherName}</p>
+            <p><strong>Father&apos;s Name:</strong> {selectedStudent.fatherName}</p>
+            <p><strong>Mother&apos;s Name:</strong> {selectedStudent.motherName}</p>
             <p><strong>Date of Birth:</strong> {selectedStudent.dob}</p>
             <p><strong>Class:</strong> {selectedStudent.className}</p>
-            <p><strong>Father's Phone:</strong> {selectedStudent.fatherPhone}</p>
-            <p><strong>Mother's Phone:</strong> {selectedStudent.motherPhone}</p>
+            <p><strong>Father&apos;s Phone:</strong> {selectedStudent.fatherPhone}</p>
+            <p><strong>Mother&apos;s Phone:</strong> {selectedStudent.motherPhone}</p>
             <p><strong>Blood Group:</strong> {selectedStudent.bloodGroup}</p>
             <p><strong>Present Address:</strong> {selectedStudent.presentAddress}</p>
             <p><strong>Permanent Address:</strong> {selectedStudent.permanentAddress}</p>
@@ -322,8 +323,10 @@ export default function StudentTable() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 bg-white text-black min-h-screen">
+    <div className="max-w-7xl mx-auto px-4 py-8 bg-white text-black min-h-screen relative">
       <h2 className="text-3xl font-bold text-center mb-6">Students</h2>
+      <Link href="/dashboard/student"><button className='btn btn-primary absolute top-8 right-4'>Add Student</button></Link>
+
 
       <div className="overflow-x-auto border rounded-lg">
         <table className="table w-full text-sm sm:text-base">
@@ -385,9 +388,8 @@ export default function StudentTable() {
             <button
               key={page}
               onClick={() => goToPage(page)}
-              className={`btn btn-sm ${
-                page === currentPage ? 'btn-primary' : 'btn-outline'
-              }`}
+              className={`btn btn-sm ${page === currentPage ? 'btn-primary' : 'btn-outline'
+                }`}
             >
               {page}
             </button>
