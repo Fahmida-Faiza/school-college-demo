@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { FcLibrary } from "react-icons/fc";
 import Testimonial from '../Homepage/Testimonial'
-
+import Classes from '../Homepage/Classes'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -236,6 +236,8 @@ const Homepage = () => {
 
 
 
+
+<Classes/>
 
 
 
