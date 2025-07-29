@@ -3,7 +3,7 @@ import React from 'react';
 const page = () => {
   return (
  <div>
-   <footer className="footer p-10 bg-blue-900 text-white">
+   <footer className="footer p-10 bg-blue-500 text-white">
   <div>
     <span className="footer-title text-white">School</span> 
     <a className="link link-hover">About Us</a> 

@@ -17,7 +17,7 @@ const Homepage = () => {
 
 
   const alumni = new Array(8).fill({
-    img: 'https://daffodilvarsity.edu.bd/images/faculty/a7ac450870ee09fec3b970ae8f9966c9.webp',
+    img: '/7426901.jpg',
     title: 'Card Title',
     description:
       'A card component has a figure, a body part, and inside body there are title and actions parts',
@@ -31,155 +31,223 @@ const Homepage = () => {
 
 
 
-
-
-
-
-
-
-      <div
-        className="hero min-h-screen"
-        style={{
-          backgroundImage:
-            "url(https://daffodilvarsity.edu.bd/images/slider/d15aa2fb4a4074ae22a7bc7cdb5e7875.webp)",
-        }}
-      >
-        <div className="hero-overlay"></div>
-        <div className="hero-content text-white text-center">
-          <div className="max-w-md ">
-            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-            <p className="mb-5">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-              quasi. In deleniti eaque aut repudiandae et a id nisi.
-            </p>
-            <button className="btn btn-primary text-white">Get Started</button>
+   <section className="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-2 gap-8 items-center">
+        {/* LEFT: QUOTE */}
+        <div>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-800 leading-snug">
+            “Never help a child with a task at which he feels he can succeed.”
+          </h2>
+          <p className="mt-4 text-sm font-semibold text-slate-600">— Maria Montessori</p>
+          <p className="mt-4 text-base text-slate-600 leading-relaxed">
+            Sed viverra arcu quis neque gravida, sit amet rhoncus mi euismod. Sed vel viverra dui.
+            Nam luctus, velit eget sollicitudin faucibus, quam sapien porta est, sed commodo justo purus feugiat leo.
+          </p>
+          <div className="mt-6 flex gap-4">
+            <button className="btn btn-primary">About Montessori</button>
+            <button className="btn btn-warning text-white">Our Story</button>
           </div>
         </div>
-      </div>
+
+        {/* RIGHT: ILLUSTRATION */}
+        <div className="flex justify-center md:justify-end">
+          <img
+            src="/on1.png"
+            alt="Children learning illustration"
+            className="max-w-md w-full"
+          />
+        </div>
+      </section>
 
 
 
-      {/* https://daffodilvarsity.edu.bd/template/images/about.jpg */}
+
+
+{/*new  */}
+
+   <div className="bg-white text-gray-800 font-sans mt-20">
+
+      {/* HERO SECTION */}
+      <section className="bg-orange-100">
+        <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 items-center gap-8">
+          {/* TEXT */}
+          <div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-orange-500">
+              HoDhyvesck Hatartony..
+            </h1>
+            <p className="text-lg text-gray-600 mb-6">
+              Empowering young minds to grow, learn, and succeed in a joyful environment.
+            </p>
+            
+          </div>
+
+          {/* IMAGE */}
+          <div className="flex justify-center">
+            <img
+              src="/5rk4_6fl4_220311.jpg"
+              alt="Happy kids"
+              className="rounded-xl max-w-full w-[90%] shadow-lg "
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURE CARDS */}
+      <section className="py-12 bg-white mt-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "School Moulding",
+                desc: "Creative and structured environment for kids.",
+                image: "/back.png.png",
+              },
+              {
+                title: "Fun Learning",
+                desc: "Play-based lessons to build early skills.",
+                image: "/7426901.jpg",
+              },
+              {
+                title: "Friendly Mentors",
+                desc: "Caring staff to guide and support children.",
+                image: "/back.png.png",
+              },
+            ].map((card, i) => (
+              <div key={i} className="bg-orange-50 rounded-lg shadow p-4">
+                <img src={card.image} alt="Feature" className="rounded-md mb-4 h-48 w-full object-cover" />
+                <h3 className="text-xl font-semibold text-orange-500">{card.title}</h3>
+                <p className="text-sm text-gray-600 mt-2">{card.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* INFO & ICON SECTION */}
+      <section className="bg-white py-12 border-t">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">Why Choose Us?</h2>
+          <p className="text-gray-500 mb-8">
+            We nurture every child’s passion for learning through joyful activities and individual attention.
+          </p>
+
+          <div className="grid md:grid-cols-4 gap-8 mt-8">
+            {[
+              { icon: "🌟", title: "5-Star Rated" },
+              { icon: "🎓", title: "Expert Teachers" },
+              { icon: "📘", title: "Modern Curriculum" },
+              { icon: "🎨", title: "Creative Programs" },
+            ].map((item, i) => (
+              <div key={i} className="p-4 border rounded-lg hover:bg-orange-50 transition">
+                <div className="text-4xl mb-2">{item.icon}</div>
+                <h4 className="font-semibold text-orange-600">{item.title}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+{/*  */}
+
 
       {/* 2nd */}
 
-      <div className='text-black lg:flex gap-10 lg:p-10 w-80 md:w-3/4 lg:w-full mx-auto'>
 
-        <div className='mt-10'>
-          <div className='text-xl'>
-            <h1 className='text-3xl'>What We Offer</h1>
-            <p>At Daffodil International University, students get the opportunity to think, learn and grow.</p>
-          </div>
-
-          {/* main image part */}
-          <div className='grid lg:grid-cols-2 gap-2 mt-10'>
-            <div className='flex gap-5'>
-              <FcLibrary className='text-3xl ' />
-              <div>
-                <h2 className='text-xl font-bold'>Accommodation</h2>
-                <p className='text-lg'>We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home....</p>
-              </div>
-            </div>
-
-            <div className='flex gap-5'>
-              <FcLibrary className='text-3xl' />
-              <div>
-                <h2 className='text-xl font-bold'>Library</h2>
-                <p className='text-lg'>We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home....</p>
-              </div>
-            </div>
-
-            <div className='flex gap-5'>
-              <FcLibrary className='text-3xl' />
-              <div>
-                <h2 className='text-xl font-bold'>Blended Learning Platform</h2>
-                <p className='text-lg'>We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home....</p>
-              </div>
-            </div>
-
-            <div className='flex gap-5'>
-              <FcLibrary className='text-3xl' />
-              <div>
-                <h2 className='text-xl font-bold'>Transportation</h2>
-                <p className='text-lg'>We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home.....</p>
-              </div>
-            </div>
-
-            <div className='flex gap-5'>
-              <FcLibrary className='text-3xl' />
-              <div>
-                <h2 className='text-xl font-bold'>One student one laptop</h2>
-                <p className='text-lg'>We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home....</p>
-              </div>
-            </div>
-
-            <div className='flex gap-5'>
-              <FcLibrary className='text-3xl' />
-              <div>
-                <h2 className='text-xl font-bold'>Sports Club & Gymnasium
-                </h2>
-                <p className='text-lg'>We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home....</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <img src=" https://daffodilvarsity.edu.bd/template/images/about.jpg " alt="" className='rounded-2xl' />
-        </div>
-
-      </div>
-
-
-      {/* 3rd events */}
-
-      <div className=' w-80 md:w-3/4 lg:w-full mx-auto'>
-        <div className='text-center text-black font-bold'>
-          <h1 className='text-4xl mt-10'>Recent Events</h1>
-          <p>Life at Daffodil is very much eventful. Through a lot of meaningful and impactful events students get the <br /> opportunity to develop their skills and portfolio beyond the curriculam
-
+{/*  */}
+ <div className="lg:max-w-7xl mx-auto mt-32">
+        <div className="mb-10 ">
+          <h1 className="text-4xl font-extrabold text-orange-500 mb-4">What We Offer</h1>
+          <p className="text-base text-gray-600">
+            At Daffodil International University, students get the opportunity to think, learn and grow.
           </p>
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-5 max-w-7xl mx-auto'>
 
-          <div className="card   md:w-72 lg:w-96 shadow-sm">
-            <figure>
-              <img src="pic.jpg" alt="" />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title text-black">Card Title</h2>
-              <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-              <div className="card-actions ">
-                <button className="btn  text-white btn-primary">Buy Now</button>
+        {/* TWO-COLUMN GRID ON MD+, SINGLE ON MOBILE */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[
+            "Accommodation",
+            "Library",
+            "Blended Learning Platform",
+            "Transportation",
+            "One student one laptop",
+            "Sports Club & Gymnasium",
+          ].map((title, i) => (
+            <div key={i} className="flex gap-4 p-4 bg-orange-50 rounded-xl shadow-sm hover:shadow-md transition">
+              <FcLibrary className="text-3xl mt-1" />
+              <div>
+                <h2 className="text-lg font-semibold text-orange-600">{title}</h2>
+                <p className="text-sm text-gray-700 mt-1">
+                  We are providing a secure and convenient living facility for our students. DIU dormitories are a home away from home.
+                </p>
               </div>
             </div>
-          </div>
-          <div className="card  md:w-72 lg:w-96 shadow-sm">
-            <figure>
-              <img src="pic.jpg" alt="" />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title text-black">Card Title</h2>
-              <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-              <div className="card-actions ">
-                <button className="btn  text-white btn-primary">Buy Now</button>
-              </div>
-            </div>
-          </div>
-          <div className="card  md:w-72 lg:w-96 shadow-sm">
-            <figure>
-              <img src="pic.jpg" alt="" />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title text-black">Card Title</h2>
-              <p className='text-black'>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-              <div className="card-actions">
-                <button className="btn  text-white btn-primary">Buy Now</button>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-      </div>
+        </div>
+{/*  */}
+      {/* 3rd events */}
+
+    
+
+
+
+
+
+{/*  */}
+
+
+<section className="py-16 bg-white mt-20">
+  <div className="max-w-7xl mx-auto px-6">
+    {/* Heading */}
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-extrabold text-orange-500 mb-4">Recent Events</h2>
+      <p className="text-base text-gray-600">
+        Life at Daffodil is very much eventful. Through a lot of meaningful and impactful events,
+        students get the opportunity to develop their skills and portfolio beyond the curriculum.
+      </p>
+    </div>
+
+    {/* Card Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[
+        {
+          title: "Startup Expo 2025",
+          desc: "Students showcased innovative startups with mentors and investors.",
+          image: "/7426901.jpg",
+        },
+        {
+          title: "Cultural Fest",
+          desc: "A colorful display of music, dance, and food celebrating our diverse campus.",
+          image: "/back.png.png",
+        },
+        {
+          title: "Tech Hackathon",
+          desc: "24-hour coding marathon solving real-world problems with AI.",
+          image: "/7426901.jpg",
+        },
+      ].map((card, i) => (
+        <div key={i} className="bg-orange-50 rounded-xl shadow-md p-6 hover:shadow-lg transition">
+          <img
+            src={card.image}
+            alt={card.title}
+            className="rounded-md mb-4 h-48 w-full object-cover"
+          />
+          <h3 className="text-xl font-semibold text-orange-600">{card.title}</h3>
+          <p className="text-sm text-gray-700 mt-2">{card.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
 
       {/* 4th alumni teachers */}
 
@@ -219,7 +287,7 @@ const Homepage = () => {
                     <h2 className='card-title text-black'>{item.title}</h2>
                     <p className='text-black'>{item.description}</p>
                     <div className='card-actions'>
-                      <button className='btn btn-primary text-white'>
+                      <button className='btn btn-warning  text-white'>
                         View Details
                       </button>
                     </div>
@@ -230,6 +298,11 @@ const Homepage = () => {
           </Swiper>
         </div>
       </div>
+
+
+
+
+ 
 
 
       <Testimonial />
