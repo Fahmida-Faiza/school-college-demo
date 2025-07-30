@@ -1,102 +1,70 @@
-import Image from 'next/image'
-import React from 'react'
+'use client';
+
+import Image from 'next/image';
+import React from 'react';
 
 function About() {
-    return (
-        <div>
-            <div className='mx-auto  w-[80%]  '>
-                <div className='text-black '>
-                    <h1 className='text-3xl font-bold text-center my-8'>OUR STORY</h1>
-                    <h2 className='text-red-400 my-2'>About Bata Bangladesh</h2>
-
-                    <p>The Bata Shoe Organization was founded in 1894 by Czech businessman Tomas Bata in the city of Zlin, what was then Czechoslovakia. Coming from a family of shoemakers with a long heritage of eight generations and over three hundred years, Tomas Bata capitalized on knowledge, expertise and skills to propel his newly founded company forward. The introduction of factory automation, long distance retailing and modernized shoe making ensured the profitability of the company from the very beginning. It is now the world’s largest manufacturer and marketer of footwear operating across the globe.
-
-                        Since its founding, Bata has been at the forefront of innovation; not only in the production and design of new styles, but in the creation of business models that permit a quick response to the ever changing wants and needs of our customers. As a result, Bata enjoys a long history as a leading manufacturer and retailer of quality footwear, and proudly serves some one million customers each day.
-
-                        Today the Bata Shoe Organization is a sprawling geo-centric company encompassing operations in more than 70 countries around the world. It serves over 1 million customers per day, employs more than 30,000 people, operates more than 5,000 international retail outlets, manages retail presence in over 70 countries and runs 27 production facilities across 20 countries.
-
-                        Bata’s reach is worldwide; its presence is local. Our novel international manufacturing structure allows Bata facilities around the globe to respond to the unique needs and wants of local customers. As a result, Bata is honored to be a local company in every country it serves. Bata continues to be guided by the same core principle it has followed for over one hundred years: to know its customers and to create the best possible products to meet their needs.
-
-                        In Bangladesh, Bata started its operation in 1962. Currently Bata Shoe Company (Bangladesh) Limited operates two manufacturing facilities – one in Tongi and the other in Dhamrai. With a production capacity of 160,000 pairs of shoes daily. Annual shoe sales currently stands about 30 million pairs.</p>
-                </div>
-
-                <div className="      grid  grid-cols-1 lg:grid-cols-3  my-20  gap-2" data-aos="fade-up"
-                    data-aos-duration="3000">
-                    <div>
-                        <div className="card card-compact text-black w-80 lg:w-96 md:w-80  shadow-xl border-x-8 bg-white">
-                            <figure>
-                                <Image
-                                    src="/9187604.png" width="700" height="1200"
-                                    className="" alt=""/>
-                            </figure>
-                            <div className="card-body items-center text-center">
-                                <h2 className="card-title">Aubrey Bravo</h2>
-                                <p>Student</p>
-                                <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">Contact Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div className="card card-compact bg-base-100 w-80  lg:w-96 md:w-80 shadow-xl border-x-8">
-                            <figure>
-                                <Image
-                                    src="/9187604.png" width="700" height="1200"
-                                    className="" alt=""/>
-                            </figure>
-                            <div className="card-body items-center text-center bg-red-500">
-                                <h2 className="card-title">Bryony Storey</h2>
-                                <p>Designer
-                                </p>
-                                <div className="card-actions justify-end">
-                                    <button className="btn btn-error text-white">Contact Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div className="card card-compact text-black w-80 lg:w-96 md:w-80   shadow-xl border-x-8 bg-white">
-                            <figure>
-                                <Image
-                                    src="/9187604.png" width="1000" height="4000" 
-                                    className="" alt="" />
-                            </figure>
-                            <div className="card-body items-center text-center">
-                                <h2 className="card-title">Annabelle Perry</h2>
-                                <p>Architect
-                                </p>
-                                <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">Contact Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-
-
-
-
-
-
-            </div>
-
-
-
-
-
-
-          
+  return (
+    <section className="bg-white py-16">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        {/* Left Image */}
+        <div className="relative rounded-xl overflow-hidden shadow-md">
+          <Image
+            src="/7426901.jpg"
+            alt="About us"
+            width={600}
+            height={400}
+            className="object-cover w-full h-full"
+          />
         </div>
 
+        {/* Right Content */}
+        <div>
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            About Our Institution
+          </h2>
+          <p className="text-gray-600 mb-6">
+            We are committed to delivering world-class education through innovative methods
+            and highly qualified educators. Our programs are designed to nurture talent,
+            creativity, and global thinking.
+          </p>
 
-    )
+          {/* Features */}
+          <div className="space-y-5">
+            <div className="flex items-start gap-4">
+              <div className="bg-orange-500 text-white p-3 rounded-full text-xl">🎓</div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-700">Expert Faculty</h4>
+                <p className="text-gray-500">
+                  Our teachers are experienced professionals passionate about mentoring.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="bg-purple-600 text-white p-3 rounded-full text-xl">💡</div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-700">Innovative Learning</h4>
+                <p className="text-gray-500">
+                  We combine technology with traditional learning to create an impactful experience.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="bg-blue-500 text-white p-3 rounded-full text-xl">🌐</div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-700">Global Recognition</h4>
+                <p className="text-gray-500">
+                  Our graduates make an impact globally in various industries and research.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default About
+export default About;

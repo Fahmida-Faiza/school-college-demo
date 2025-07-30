@@ -8,27 +8,27 @@ const testimonials = [
   {
     name: "Cdr Prof. Bhushan Dewan",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+      "/7426901.jpg",
     quote:
       "Unique diversified working with vast range of activities including IT-enabled education, management, entrepreneurship...",
   },
   {
     name: "Anisul Haq",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+      "/back.png.png",
     quote: "ড্যাফোডিল বিশ্ববিদ্যালয়: অসাধারণ আমার মনে হয়েছে।",
   },
   {
     name: "Dr. James Lee",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+      "/7426901.jpg",
     quote:
       "Incredible learning environment with dedicated faculty and student-centered approach.",
   },
   {
     name: "Dr. Kalif",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+      "/back.png.png",
     quote:
       "Incredible learning environment with dedicated faculty and student-centered approach.",
   },
@@ -39,7 +39,7 @@ export default function App() {
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-16 bg-white">
       {/* Title */}
       <div className="max-w-3xl text-center">
-        <h1 className="text-4xl text-black font-bold mb-4">Visitors Says About Us</h1>
+        <h1 className="text-3xl font-semibold text-orange-500  mb-4">Visitors Says About Us</h1>
         <p className="text-gray-600 mb-12">
           National and International scholars, Business leaders, Entrepreneurs,
           Dignitaries visited us to share experiences, explore opportunities,
@@ -67,7 +67,7 @@ export default function App() {
                 <div className="text-center md:text-left max-w-2xl">
                   <p className="text-[70px] leading-none text-purple-100 -mt-10 mb-4">“</p>
                   <p className="text-lg text-gray-800 mb-4">{t.quote}</p>
-                  <p className="text-md font-semibold">{t.name}</p>
+                  <p className="text-md font-semibold text-orange-500">{t.name}</p>
                 </div>
               </div>
             </SwiperSlide>
