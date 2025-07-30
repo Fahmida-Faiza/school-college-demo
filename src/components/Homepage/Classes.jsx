@@ -18,44 +18,60 @@ export default function ClassCards() {
   }
 
   return (
-    <section className="max-w-7xl mx-auto p-6">
-      <h1 className="text-4xl font-extrabold text-center mb-12 text-blue-700 drop-shadow-md">
+    <section className="max-w-7xl mx-auto p-6 my-20">
+      <h1 className="text-4xl font-extrabold text-center mb-12 text-orange-600 drop-shadow-sm">
         Select a Class
       </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {classes.map((item, index) => (
-          <div
-            key={item.id}
-            className="bg-white border border-blue-300 rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition duration-300 cursor-pointer"
-            onClick={() => handleClick(item.id)}
-          >
-            <div className="p-6 flex flex-col h-full">
+        {classes.map((item) => {
+          const isJunior = ['play', 'nursery', 'kg'].includes(item.id)
+          const borderColor = isJunior ? 'border-l-8 border-green-500' : 'border-l-8 border-orange-500'
+          const bgHover = isJunior ? 'hover:bg-green-50' : 'hover:bg-orange-50'
+          const borderHover = isJunior ? 'hover:border-green-600' : 'hover:border-orange-600'
+          const badgeBg = isJunior ? 'bg-green-200 text-green-800' : 'bg-orange-200 text-orange-800'
+          const buttonGradient = isJunior
+            ? 'bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 focus:ring-green-300'
+            : 'bg-gradient-to-r from-orange-400 to-orange-600 hover:from-orange-500 hover:to-orange-700 focus:ring-orange-300'
+
+          return (
+            <div
+              key={item.id}
+              onClick={() => handleClick(item.id)}
+              className={`
+                bg-white border border-gray-200 rounded-xl shadow-md
+                cursor-pointer
+                transition-all duration-300 ease-in-out
+                hover:shadow-xl
+                hover:translate-x-1 hover:-translate-y-1
+                flex flex-col p-6
+                ${borderColor} ${bgHover} ${borderHover}
+              `}
+            >
               <div className="flex items-center justify-between mb-4">
-                <h2 className="text-xl font-semibold text-blue-900">{item.name}</h2>
-                <span
-                  className={`inline-block px-3 py-1 text-sm font-medium rounded-full ${
-                    index < 3
-                      ? 'bg-blue-500 text-white'
-                      : 'bg-green-500 text-white'
-                  } select-none`}
-                >
-                  {index < 3 ? 'Junior' : 'Primary'}
+                <h2 className="text-xl font-semibold text-gray-900">{item.name}</h2>
+                <span className={`inline-block px-3 py-1 text-sm font-semibold rounded-full select-none ${badgeBg}`}>
+                  {isJunior ? 'Junior' : 'Primary'}
                 </span>
               </div>
-              <p className="text-gray-600 flex-grow">{item.desc}</p>
+              <p className="text-gray-700 flex-grow">{item.desc}</p>
               <button
                 onClick={(e) => {
                   e.stopPropagation()
                   handleClick(item.id)
                 }}
-                className="mt-6 bg-orange-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg shadow-md transition"
+                className={`
+                  mt-6
+                  text-white font-semibold py-2 rounded-lg shadow-md
+                  transition transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4
+                  ${buttonGradient}
+                `}
               >
                 View Students
               </button>
             </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </section>
   )
