@@ -15,13 +15,48 @@ import Link from 'next/link';
 
 const Homepage = () => {
 
-
-  const alumni = new Array(8).fill({
+const alumni = [
+  {
     img: '/7426901.jpg',
-    title: 'Card Title',
-    description:
-      'A card component has a figure, a body part, and inside body there are title and actions parts',
-  });
+    title: 'Dr. Ahsan Habib',
+    description: 'Researcher at MIT, published 20+ AI papers, and contributes to national education reform.',
+  },
+  {
+    img: '/back.png.png',
+    title: 'Prof. Farzana Islam',
+    description: 'Working with UNESCO and leading global teacher training initiatives.',
+  },
+  {
+    img: '/book-with-green-board-background.jpg',
+    title: 'Engr. Rahim Uddin',
+    description: 'Now a top-level engineer at Google, promoting open-source education tools.',
+  },
+  {
+    img: '/7426901.jpg',
+    title: 'Dr. Jahanara Begum',
+    description: 'Dean of Education at a top university, mentoring thousands of future teachers.',
+  },
+  {
+    img: '/back.png.png',
+    title: 'Mohammad Karim',
+    description: 'Runs a successful ed-tech startup empowering rural schools.',
+  },
+  {
+    img: '/7426901.jpg',
+    title: 'Fatima Nahar',
+    description: 'Conducts cross-cultural education research and works at UNICEF.',
+  },
+  {
+    img: '/book-with-green-board-background.jpg',
+    title: 'Samiul Islam',
+    description: 'Key figure in national textbook policy, advisor to Ministry of Education.',
+  },
+  {
+    img: '/7426901.jpg',
+    title: 'Taslima Nasrin',
+    description: 'Professor in Canada, blending Bengali culture in international curriculums.',
+  },
+];
 
 
 
@@ -252,52 +287,55 @@ const Homepage = () => {
       {/* 4th alumni teachers */}
 
 
-
-      <div className='mt-10'>
-        <div className='text-center text-black font-bold'>
-          <h1 className='text-4xl mt-10'>Teachers Alumni</h1>
-          <p className='text-black'>
-            Our Alumni are our pride as they are engaged in building the world
-            through national and International contributions
+ <section className="py-16 bg-white mt-20">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-extrabold text-orange-500 mb-4">Teachers Alumni</h2>
+          <p className="text-base text-gray-600">
+            Our Alumni are our pride as they are engaged in building the world through national and international contributions.
           </p>
         </div>
 
-        <div className='max-w-7xl mx-auto mt-10 px-4  '>
-          <Swiper
-            modules={[Autoplay, Pagination]}
-            spaceBetween={30}
-            slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-              1280: { slidesPerView: 4 },
-            }}
-            autoplay={{ delay: 3000 }}
-            loop={true}
-            pagination={{ clickable: true }}
-          >
-            {alumni.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className='  card md:w-72 lg:w-80 shadow-sm p-2 '>
-                  <figure>
-                    <img src={item.img} alt={item.title} />
-                  </figure>
-                  <div className='card-body'>
-                    <h2 className='card-title text-black'>{item.title}</h2>
-                    <p className='text-black'>{item.description}</p>
-                    <div className='card-actions'>
-                      <button className='btn btn-warning  text-white'>
-                        View Details
-                      </button>
-                    </div>
+        {/* Swiper Slider */}
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          spaceBetween={30}
+          autoplay={{ delay: 5000 ,disableOnInteraction: false}}
+          loop={true}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+          }}
+        >
+          {alumni.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-orange-50 rounded-xl shadow-md p-6 hover:shadow-lg transition h-[420px] flex flex-col justify-between">
+                <div>
+                  <div className="h-48 w-full overflow-hidden rounded-md mb-4">
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="h-full w-full object-cover"
+                    />
                   </div>
+                  <h3 className="text-xl font-semibold text-orange-600">{item.title}</h3>
+                  <p className="text-sm text-gray-700 mt-2 line-clamp-3">{item.description}</p>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+                <div className="mt-4">
+                  <button className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
+    </section>
 
 
 

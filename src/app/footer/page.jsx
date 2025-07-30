@@ -7,7 +7,7 @@ const page = () => {
   <div>
     <span className="footer-title text-white">School</span> 
     <a className="link link-hover">About Us</a> 
-    <a className="link link-hover">Head Teacher's Message</a> 
+    <a className="link link-hover">Head Teacher&apos;s Message</a> 
     <a className="link link-hover">Our Mission</a> 
     <a className="link link-hover">Campus Life</a>
   </div> 
